@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block styles %}
+	<style>
+		body {
+		   border-top: 4px solid #999;
+		   background: url('{% static "img/beach.jpg"%}') no-repeat center center fixed; 
+		   -webkit-background-size: cover;
+		   -moz-background-size: cover;
+		   -o-background-size: cover;
+		   background-size: cover;
+		}
+	</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="background-img">	
+	<div class="jumbotron">
+		<div class="container">
+			<div class='col-sm-6'>
+				<h1>Hello, world!</h1>
+				<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+				<p><a class="btn btn-default btn-lg btn-block" href="#signup" role="button">Be first &raquo;</a></p>
+			</div>  
+	    	<div class='col-sm-6'>
+	    		<img src="{% static 'img/IMG_0267.jpg' %}" class='img-responsive'>
+	    	</div> 
+	    </div>
+	</div>
+
+	<div class='container' style='text-align: center; color:white;' id="signup">
+		<div class="col-sm-6 col-sm-offset-3">
+					<i class="fa fa-unlock-alt fa-5x"></i></br>
+					<H1>Unlock first!</H1>
+
+			<form class="form-horizontal" method="POST" action=""> {% csrf_token %}
+				<div class="form-group form-group-lg">
+					{% if form.email.errors %}
+						{% for err in form.email.errors %}
+							<div class="alert alert-danger" role="alert">{{ form.email.errors }}</div>
+						{% endfor %}
+					{% endif %}
+					<div class="input-group">
+						<input class="form-control" type = 'email' name = 'email' placeholder='Enter your email...'>
+							<span class="input-group-btn">
+								<input type = 'submit' value = 'Join' class = 'btn btn-primary btn-lg'>
+							</span>
+					</div>
+				</div>
+			</form>
+			<p class="lead">Signup here. <br/>Get first news on content</p>
+		</div>
+	</div>
+
+	<div class='row featuredRow'>
+		<div class='col-sm-12'>
+			<div class="col-sm-3">
+				<i class="fa fa-upload fa-5x"></i></br> 
+				<h2>Feature</h2>
+				<p class="lead">Some feature text here</p>
+			</div>
+			<div class="col-sm-3">
+				<i class="fa fa-upload fa-5x"></i></br> 
+				<h2>Feature</h2>
+				<p class="lead">Some feature text here</p>
+			</div>
+			<div class="col-sm-3">
+				<i class="fa fa-upload fa-5x"></i></br> 
+				<h2>Feature</h2>
+				<p class="lead">Some feature text here</p>
+			</div>
+			<div class="col-sm-3">
+				<i class="fa fa-upload fa-5x"></i></br> 
+				<h2>Feature</h2>
+				<p class="lead">Some feature text here</p>
+			</div>
+		</div>
+	</div>
+		<div class='row featuredRow'>
+			<div class='col-sm-12'>
+				<div class="col-sm-3">
+					<i class="fa fa-upload fa-5x"></i></br> 
+					<h2>Feature</h2>
+					<p class="lead">Some feature text here</p>
+				</div>
+				<div class="col-sm-3">
+					<i class="fa fa-upload fa-5x"></i></br> 
+					<h2>Feature</h2>
+					<p class="lead">Some feature text here</p>
+				</div>
+				<div class="col-sm-3">
+					<i class="fa fa-upload fa-5x"></i></br> 
+					<h2>Feature</h2>
+					<p class="lead">Some feature text here</p>
+				</div>
+				<div class="col-sm-3">
+					<i class="fa fa-upload fa-5x"></i></br> 
+					<h2>Feature</h2>
+					<p class="lead">Some feature text here</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}	

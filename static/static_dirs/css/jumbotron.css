@@ -1,0 +1,53 @@
+body {
+	padding-top: 0px;
+	padding-bottom: 20px;
+}
+
+.navbar.navbar-inverse {
+	margin-bottom: 0px;
+	border-radius: 0px;
+}
+
+.navbar-inverse .navbar-brand, .navbar-brand:hover {
+	color: white;
+}
+
+.pull-right {
+  float: right !important;
+} 
+
+.jumbotron{
+	background-color: white;
+}
+
+.jumbotron h1 {
+	font-weight: 100;
+}
+
+.jumbotron p {
+	font-weight: 100;
+	font-size: 30px;
+}
+
+.featuredRow {
+	text-align: center; 
+	background-color:white; 
+	min-height:200px;
+	padding: 40px 20px; 
+	border-bottom: solid 1px #EEE
+}
+
+.navbar-inverse {
+	background-color: #E47541;
+	border-color: #E47541;
+}
+
+
+
+/*body div.background-img {
+	background: url('{% static "img/beach.jpg"%}') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}*/
